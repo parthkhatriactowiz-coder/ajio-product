@@ -84,8 +84,8 @@ def get_discount_percent(price, original_price):
 def get_size_variants(variants):
     size_list = []
     for variant in variants:
-        price = variant.get("priceData", {}).get("value", 0)
-        original_price = variant.get("wasPriceData", {}).get("value", 0)
+        price = variant.get("priceData", {}).get("value", 0.0)
+        original_price = variant.get("wasPriceData", {}).get("value", 0.0)
 
         size_info = {
             "size": variant.get("scDisplaySize", ""),
