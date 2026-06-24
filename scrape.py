@@ -56,10 +56,12 @@ def get_specifications(product_details_section, mandatory_info):
         feature_values = ""
         for fv in details.get("featureValues", []):
             feature_values = fv.get("value", "")
-        specifications[details.get("name", "")] = feature_values
+        key = details.get("name", "").replace(" ", "_").lower()
+        specifications[key] = feature_values
 
     for info in mandatory_info:
-        specifications[info.get("key", "")] = info.get("title", "")
+        key = info.get("key", "").replace(" ", "_").lower()
+        specifications[key] = info.get("title", "")
 
     return specifications
 
@@ -115,7 +117,7 @@ def process_products(data, base_url):
     main_image = get_main_image(images)
     gallery_images = get_gallery_images(images)
     specifications = get_specifications(product_details_section, mandatory_info)
-    specifications["MRP"] = get_mrp_text(variants)
+    specifications["mrp"] = get_mrp_text(variants)
     offers = get_offers(prepaid_offers)
     size_variants = get_size_variants(variants)
 
