@@ -5,7 +5,7 @@
         "product_id": "469621002_green",
         "url": "https://www.ajio.com/u-s-polo-assn--men-tailored-fit-shirt-with-patch-pocket/p/469621002_green",
         "rating": 3.7,
-        "total_reviews": "76",
+        "total_reviews": 76.0,
         "color": "Green",
         "main_image": "https://assets.ajio.com/medias/sys_master/root/20250224/Y0qQ/67bc7c0159f8353980ec06ac/-473Wx593H-469621002-green-MODEL.jpg",
         "other_images": [
@@ -17,36 +17,16 @@
             "https://assets.ajio.com/medias/sys_master/root/20250224/P2MY/67bc76912960820c49a056b7/-473Wx593H-469621002-green-MODEL6.jpg"
         ],
         "specifications": {
-            "Primary Color": [
-                "Green"
-            ],
-            "Fit": [
-                "Tailored Fit"
-            ],
-            "Package Contains": [
-                "Package contains: 1 shirt"
-            ],
-            "Wash Care": [
-                "Machine wash"
-            ],
-            "Transparency": [
-                "Opaque"
-            ],
-            "Size worn by Model": [
-                "M"
-            ],
-            "Mood": [
-                "Classic"
-            ],
-            "Fabric Composition": [
-                "Cotton"
-            ],
-            "Length": [
-                "Medium"
-            ],
-            "Sleeve": [
-                "Full-Length"
-            ],
+            "Primary Color": "Green",
+            "Fit": "Tailored Fit",
+            "Package Contains": "Package contains: 1 shirt",
+            "Wash Care": "Machine wash",
+            "Transparency": "Opaque",
+            "Size worn by Model": "M",
+            "Mood": "Classic",
+            "Fabric Composition": "Cotton",
+            "Length": "Medium",
+            "Sleeve": "Full-Length",
             "Marketed By": "ARVIND LIFESTYLE BRANDS LTD, Du parc trinity, 8th floor, 17, M.G. Road, banglore - 560001",
             "Net Qty": "1 N",
             "Manufactured By": "PUNIT CREATION,NO 44  NEAR MACAULAY ENGLISH SCHOOL,KUDLU CROSS HOSAPALAYA MAIN ROAD,BENGALURU,560068,Karnataka",

@@ -43,7 +43,7 @@ def get_offers(offers):
             "start_date": convert_timestamp(offer.get("startDate", 0)),
             "end_date": convert_timestamp(offer.get("endDate", 0)),
             "offer_code": offer.get("offerCode", ""),
-            "offer_amount": offer.get("offerAmount", 0),
+            "offer_amount": offer.get("offerAmount", 0.00),
         }
         offer_list.append(offer_details)
     return offer_list
@@ -53,9 +53,9 @@ def get_specifications(product_details_section, mandatory_info):
     specifications = {}
 
     for details in product_details_section:
-        feature_values = []
+        feature_values = ""
         for fv in details.get("featureValues", []):
-            feature_values.append(fv.get("value", ""))
+            feature_values = fv.get("value", "")
         specifications[details.get("name", "")] = feature_values
 
     for info in mandatory_info:
@@ -104,8 +104,8 @@ def process_products(data, base_url):
     variants = product_details.get("variantOptions", [])
     images = product_details.get("images", [])
     rate_response = product_details.get("ratingsResponse", {})
-    rating = rate_response.get("aggregateRating", {}).get("averageRating", 0)
-    total_reviews = rate_response.get("aggregateRating", {}).get("numUserRatings", 0)
+    rating = rate_response.get("aggregateRating", {}).get("averageRating", 0.0)
+    total_reviews = float(rate_response.get("aggregateRating", {}).get("numUserRatings", 0.00))
     product_details_section = product_details.get("sectionOne", {}).get(
         "featureData", []
     )
@@ -134,7 +134,7 @@ def process_products(data, base_url):
         "offers": offers,
     }
     products.append(product_info)
-    
+
     return products
 
 
@@ -144,4 +144,3 @@ output_path = "C:/Users/parth.khatri/Desktop/github/ajio-product/ajio_output.jso
 data = read_json_file(input_path)
 product_data = process_products(data, "https://www.ajio.com")
 write_json_file(output_path, product_data)
-
