@@ -12,6 +12,13 @@ def write_json_file(output_path, data):
         json.dump(data, f, indent=4)
 
 
+def get_main_image(images):
+    for img in images:
+        if img.get("imageType", "") == "PRIMARY" and img.get("format", "") == "product":
+            return img.get("url", "")
+    return ""
+
+
 def get_gallery_images(images):
     gallery_images = []
     for img in images:
@@ -57,8 +64,10 @@ def get_specifications(product_details_section, mandatory_info):
     return specifications
 
 
-def get_mrp_text(variant):
-    for info in variant.get("mandatoryInfo", []):
+def get_mrp_text(variants):
+    if not variants:
+        return ""
+    for info in variants[0].get("mandatoryInfo", []):
         if info.get("key", "") == "MRP":
             title = info.get("title", "")
             subtitle = info.get("subTitle", "")
@@ -84,7 +93,6 @@ def get_size_variants(variants):
             "price": price,
             "original_price": original_price,
             "discount_percent": get_discount_percent(price, original_price),
-            "mrp": get_mrp_text(variant),
         }
         size_list.append(size_info)
     return size_list
@@ -104,8 +112,10 @@ def process_products(data, base_url):
     mandatory_info = product_details.get("mandatoryInfo", [])
     prepaid_offers = product_details.get("prepaidOffers", [])
 
+    main_image = get_main_image(images)
     gallery_images = get_gallery_images(images)
     specifications = get_specifications(product_details_section, mandatory_info)
+    specifications["MRP"] = get_mrp_text(variants)
     offers = get_offers(prepaid_offers)
     size_variants = get_size_variants(variants)
 
@@ -117,6 +127,7 @@ def process_products(data, base_url):
         "rating": rating,
         "total_reviews": total_reviews,
         "color": product_details.get("verticalColor", ""),
+        "main_image": main_image,
         "other_images": gallery_images,
         "specifications": specifications,
         "sizes": size_variants,

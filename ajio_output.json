@@ -7,6 +7,7 @@
         "rating": 3.7,
         "total_reviews": "76",
         "color": "Green",
+        "main_image": "https://assets.ajio.com/medias/sys_master/root/20250224/Y0qQ/67bc7c0159f8353980ec06ac/-473Wx593H-469621002-green-MODEL.jpg",
         "other_images": [
             "https://assets.ajio.com/medias/sys_master/root/20250224/Y0qQ/67bc7c0159f8353980ec06ac/-473Wx593H-469621002-green-MODEL.jpg",
             "https://assets.ajio.com/medias/sys_master/root/20250224/m9vX/67bc802459f8353980ec5d31/-473Wx593H-469621002-green-MODEL2.jpg",
@@ -51,7 +52,8 @@
             "Manufactured By": "PUNIT CREATION,NO 44  NEAR MACAULAY ENGLISH SCHOOL,KUDLU CROSS HOSAPALAYA MAIN ROAD,BENGALURU,560068,Karnataka",
             "Country Of Origin": "India",
             "Customer Care Address": "Tower-B, 7th Floor,IBC Knowledge Park,Bannerghatta Main Road,Bhavani Nagar, S.G. Palya,Bengaluru, Karnataka \u2013 560029,Ph: 1800-889-9991,E-mail: customercare@ajio.com",
-            "Commodity": "Men's Shirts"
+            "Commodity": "Men's Shirts",
+            "MRP": "Rs. 2,299.00 inclusive of all taxes((MRP changes as per size selection))"
         },
         "sizes": [
             {
@@ -59,64 +61,56 @@
                 "product_code": "469621002006",
                 "price": 2299,
                 "original_price": 2299,
-                "discount_percent": 0.0,
-                "mrp": "Rs. 2,299.00 inclusive of all taxes((MRP changes as per size selection))"
+                "discount_percent": 0.0
             },
             {
                 "size": "M",
                 "product_code": "469621002005",
                 "price": 805,
                 "original_price": 2299,
-                "discount_percent": 64.98,
-                "mrp": "Rs. 2,299.00 inclusive of all taxes((MRP changes as per size selection))"
+                "discount_percent": 64.98
             },
             {
                 "size": "L",
                 "product_code": "469621002004",
                 "price": 2299,
                 "original_price": 2299,
-                "discount_percent": 0.0,
-                "mrp": "Rs. 2,299.00 inclusive of all taxes((MRP changes as per size selection))"
+                "discount_percent": 0.0
             },
             {
                 "size": "XL",
                 "product_code": "469621002007",
                 "price": 805,
                 "original_price": 2299,
-                "discount_percent": 64.98,
-                "mrp": "Rs. 2,299.00 inclusive of all taxes((MRP changes as per size selection))"
+                "discount_percent": 64.98
             },
             {
                 "size": "XXL",
                 "product_code": "469621002008",
                 "price": 2299,
                 "original_price": 2299,
-                "discount_percent": 0.0,
-                "mrp": "Rs. 2,299.00 inclusive of all taxes((MRP changes as per size selection))"
+                "discount_percent": 0.0
             },
             {
                 "size": "3XL",
                 "product_code": "469621002001",
                 "price": 2299,
                 "original_price": 2299,
-                "discount_percent": 0.0,
-                "mrp": "Rs. 2,299.00 inclusive of all taxes((MRP changes as per size selection))"
+                "discount_percent": 0.0
             },
             {
                 "size": "4XL",
                 "product_code": "469621002002",
                 "price": 2299,
                 "original_price": 2299,
-                "discount_percent": 0.0,
-                "mrp": "Rs. 2,299.00 inclusive of all taxes((MRP changes as per size selection))"
+                "discount_percent": 0.0
             },
             {
                 "size": "5XL",
                 "product_code": "469621002003",
                 "price": 2299,
                 "original_price": 2299,
-                "discount_percent": 0.0,
-                "mrp": "Rs. 2,299.00 inclusive of all taxes((MRP changes as per size selection))"
+                "discount_percent": 0.0
             }
         ],
         "offers": [
