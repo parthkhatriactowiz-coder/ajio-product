@@ -85,13 +85,13 @@ def get_size_variants(variants):
             "original_price": original_price,
             "discount_percent": get_discount_percent(price, original_price),
             "mrp": get_mrp_text(variant),
-            "main_image": variant.get("modelImage", {}).get("url", ""),
         }
         size_list.append(size_info)
     return size_list
 
 
 def process_products(data, base_url):
+    products = []
     product_details = data.get("product", {}).get("productDetails", {})
     variants = product_details.get("variantOptions", [])
     images = product_details.get("images", [])
@@ -122,8 +122,9 @@ def process_products(data, base_url):
         "sizes": size_variants,
         "offers": offers,
     }
-
-    return [product_info]
+    products.append(product_info)
+    
+    return products
 
 
 input_path = "C:/Users/parth.khatri/Desktop/github/ajio-product/ajio.json"
